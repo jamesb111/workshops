@@ -39,9 +39,13 @@ public class SuperVillain extends SuperPerson{
         }
 
 
+
     }
 
-
+//    @Override
+//    public String getType() {
+//        return "Super Villain";
+//    }
 
 
 }

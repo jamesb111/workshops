@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class SuperPerson {
+//abstract prevents you from making a Superperson you can only extend superperson with subclasses
+public abstract class SuperPerson {
     protected String name;
     protected int health;
     protected int experiencePoints;
@@ -34,12 +35,10 @@ public class SuperPerson {
         return false;
     }
 
-    public void fightPerson(SuperPerson opponent) {
-        int damageAmount = new Random().nextInt(21);
+    public abstract void fightPerson(SuperPerson opponent);
 
-        //print who we are fighting
-        System.out.println(this.name + " is fighting " + opponent.name);
-        opponent.takeDamage(damageAmount);
+    public  String getType() {
+        return this.getClass().getSimpleName();
     }
 
     public void takeDamage(int damageAmnt) {

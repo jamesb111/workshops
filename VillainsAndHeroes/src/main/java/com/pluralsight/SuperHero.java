@@ -82,6 +82,10 @@ public class SuperHero extends SuperPerson{
 
     }
 
+//    @Override
+//    public String getType() {
+//        return "Super Hero";
+//    }
 
 
 }

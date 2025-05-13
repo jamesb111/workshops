@@ -13,14 +13,22 @@ public class SuperApp {
 
 
         while(hero.isAlive() && villain.isAlive()) {
+            System.out.println("-------------------------------------");
             hero.fightPerson(villain);
             hero.logHit(villain);
 
             System.out.println(villain.getStatus());
+            System.out.println("-------------------------------------");
 
+            if(!villain.isAlive()) {
+                break;
+            }
 
+            System.out.println("-------------------------------------");
             villain.fightPerson(hero);
             villain.logHit(hero);
+            System.out.println("-------------------------------------");
+
 
 
             System.out.println(hero.getStatus());
@@ -30,12 +38,10 @@ public class SuperApp {
         villain.printBattleLog();
 
 
-        if(hero.health > villain.health) {
+        if(hero.isAlive()) {
             System.out.println("Our great hero " + hero.name +" has saved the world from the evil clutches of " + villain.name);
-        } else if(villain.health > hero.health) {
+        } else if(villain.isAlive()) {
             System.out.println("Someone please help us " + hero.name + " has lost the fight " + villain.name + " reigns supreme!");
-        } else {
-            System.out.println("The battle ended in a draw. Thanos has made the ultimate sacrifice to save the world");
         }
     }
 }
