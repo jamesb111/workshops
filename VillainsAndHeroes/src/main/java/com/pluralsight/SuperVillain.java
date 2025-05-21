@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 
-public class SuperVillain extends SuperPerson{
+public class SuperVillain extends SuperPerson {
     public SuperVillain(String name, int health, int negativeEnergy) {
         super(name, health);
         this.experiencePoints = negativeEnergy;

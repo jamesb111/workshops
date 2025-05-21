@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Random;
 
 //abstract prevents you from making a Superperson you can only extend superperson with subclasses
-public abstract class SuperPerson {
+public abstract class SuperPerson implements Fightable {
     protected String name;
     protected int health;
     protected int experiencePoints;

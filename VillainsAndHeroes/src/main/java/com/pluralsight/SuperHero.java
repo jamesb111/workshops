@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SuperHero extends SuperPerson{
+public class SuperHero extends SuperPerson {
     static Scanner scan = new Scanner(System.in);
     //constructor that calls the parent class constructor
     public SuperHero(String name, int health, int heroicPower) {
